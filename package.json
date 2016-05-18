@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.5",
-    "angularjs": "0.0.1",
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.3"
   }

@@ -16,8 +16,7 @@
 		<h5>Melee</h5>
 		<br />
 		<input type='checkbox' id='signup_melee_singles' class='signup_checkbox' /> Singles <br /> 
-		<input type='checkbox' id='signup_melee_doubles' class='signup_checkbox' /> Doubles <br />
-		<br />
+		<input type='checkbox' id='signup_melee_doubles' class='signup_checkbox' /> Doubles <br /> <br />
 		<h5>Project M</h5>
 		<br />
 		<input type='checkbox' id='signup_pm_singles' class='signup_checkbox' /> Singles <br /> 
@@ -25,26 +24,26 @@
 		<h5>Smash 4</h5>
 		<br /> 
 		<input type='checkbox' id='signup_smash4_singles' class='signup_checkbox' /> Singles <br /> 
-		<input type='checkbox' id='signup_smash4_doubles' class='signup_checkbox' /> Doubles <br />
+		<input type='checkbox' id='signup_smash4_doubles' class='signup_checkbox' /> Doubles <br /> <br />
 		<hr />
-		<br />
 		<p id='signup_total_p' class='signup_p'></p>
-		
-		<!-- PAY PAL Button Goes Here -->
-		<!-- SIMPLE BUTTON. PAYS PREREGISTRATION FEE ONLY -->
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-			<input type="hidden" name="cmd" value="_xclick">
-			<input type="hidden" name="business" value="bcooke91@gmail.com">
-			<input type="hidden" name="lc" value="GB">
-			<input type="hidden" name="item_name" value="Preregistration Fee">
-			<input type="hidden" name="amount" value="10.00">
-			<input type="hidden" name="currency_code" value="USD">
-			<input type="hidden" name="button_subtype" value="services">
-			<input type="hidden" name="no_note" value="0">
-			<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHostedGuest">
-			<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-		</form>
+		<hr />
+	</form>
+	<!-- PAY PAL Button Goes Here -->
+	<!-- SIMPLE BUTTON. PAYS PREREGISTRATION FEE ONLY -->
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="bcooke91@gmail.com">
+		<input type="hidden" name="lc" value="GB">
+		<input type="hidden" name="item_name" value="Preregistration Fee">
+		<input type="hidden" name="amount" value="10.00">
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="hidden" name="button_subtype" value="services">
+		<input type="hidden" name="no_note" value="0">
+		<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHostedGuest">
+		<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+	</form>
 		
 		<!-- MORE SPECIFIC. INVOLVES BUYING INTO ALL GAMES SELECTED -->
 		<!-- 
@@ -88,7 +87,6 @@
 			<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 		</form>
 		-->
-	</form>
 </body>
 <!-- 
 <script src='../node_modules/angular/angular.min.js' ></script>

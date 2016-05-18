@@ -1,5 +1,27 @@
 var checkedEventsSignup = 0;
 var checkedEventsConfig = 0;
+var tagBody = '(?:[^"\'>]|"[^"]*"|\'[^\']*\')*';
+
+var tagOrComment = new RegExp(
+    '<(?:'
+    // Comment body.
+    + '!--(?:(?:-*[^->])*--+|-?)'
+    // Special "raw text" elements whose content should be elided.
+    + '|script\\b' + tagBody + '>[\\s\\S]*?</script\\s*'
+    + '|style\\b' + tagBody + '>[\\s\\S]*?</style\\s*'
+    // Regular name
+    + '|/?[a-z]'
+    + tagBody
+    + ')>',
+    'gi');
+function removeTags(html) {
+  var oldHtml;
+  do {
+    oldHtml = html;
+    html = html.replace(tagOrComment, '');
+  } while (html !== oldHtml);
+  return html.replace(/</g, '&lt;');
+}
 
 //ITERATE THROUGH ALL SIGNUP CHECKBOXES
 function chekedSignupEvents(){
@@ -133,7 +155,20 @@ function buildSignupObject(){
 	return signup;
 };
 
+function sanatizeTextboxes(){
+	$('.config_textbox').each(function(){
+		$(this).outerHtml = removeTags($(this).outerHtml);
+	});
+	
+	$('.signup_textbox').each(function(){
+		$(this).outerHtml = removeTags($(this).outerHtml);
+	});
+}
+
 $('#config_submit').click(function(){
+	
 	var configTF = true;
 	var tournament = buildTournamentObject(configTF);
+	
+	//SUBMIT TO DATABASE
 });

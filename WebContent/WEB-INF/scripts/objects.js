@@ -1,8 +1,9 @@
 class Signup{
-	constructor(name, tag, region, events){
+	constructor(name, tag, region, tournamentId, events){
 		this.name = name;
 		this.tag = tag;
 		this.region = region;
+		this.tournamentId = tournamentId;
 		this.events = events;
 	}
 }
