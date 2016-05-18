@@ -1,0 +1,17 @@
+{
+  "name": "simple_payment_signup",
+  "version": "1.0.0",
+  "description": "Web Page to host a simple signup form w/ Pay Pal payment acceptance",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Brandon Lee Cooke",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angularjs": "0.0.1",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
+  }
+}
