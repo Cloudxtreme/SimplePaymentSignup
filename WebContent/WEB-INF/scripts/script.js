@@ -155,7 +155,7 @@ function buildSignupObject(){
 	return signup;
 };
 
-function sanatizeTextboxes(){
+function sanitizeTextboxes(){
 	$('.config_textbox').each(function(){
 		$(this).outerHtml = removeTags($(this).outerHtml);
 	});
@@ -166,9 +166,15 @@ function sanatizeTextboxes(){
 }
 
 $('#config_submit').click(function(){
-	
+	sanitizeTextboxes();
 	var configTF = true;
 	var tournament = buildTournamentObject(configTF);
-	
-	//SUBMIT TO DATABASE
+	return tournament;
+});
+
+$('#signup_submit').click(function(){
+	sanitizeTextboxes();
+	var contifTF = false;
+	var signup = buildSignupObject(configTF);
+	return signup;
 });
